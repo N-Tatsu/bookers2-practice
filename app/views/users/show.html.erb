@@ -1,21 +1,4 @@
-<h2>User info</h2>
-<table>
-  <tbody>
-      <tr>
-          <td><%= image_tag @user.get_profile_image(100,100) %></td>
-      </tr>
-      <tr>
-          <td>name</td>
-          <td><%= @user.name %></td>
-      </tr>
-      <tr>
-          <td>introduction</td>
-          <td><%= @user.introduction %></td>
-      </tr>
-
-  </tbody>
-
-</table>
+<h2>user </h2>
 
 
 
@@ -26,6 +9,29 @@
 <%= f.text_area :body %><br>
 <%= f.submit 'Create Book' %>
 <% end %>
+
+
+<h2>Books</h2>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @books.each do |book| %>
+    <tr>
+      <td><%= image_tag @user.get_profile_image(100,100) %></td>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
 
 
 
