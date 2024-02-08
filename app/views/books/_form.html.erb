@@ -1,0 +1,6 @@
+<%= form_with model:@book do |f| %>
+<div class="form-group"></div>
+<%= f.text_field :title %><br>
+<%= f.text_area :body %><br>
+<%= f.submit 'Create Book' %>
+<% end %>
